@@ -1,0 +1,33 @@
+﻿<Window x:Class="GheymetTala_Dolar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GheymetTala_Dolar"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="348" Width="571">
+    <Grid Background="Azure">
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,50,50,0" VerticalAlignment="Top" Width="300">
+            <Grid>
+                <Label x:Name="label_Dolar" Content=": قیمت آزاد دلار" HorizontalAlignment="Right" Margin="0,20,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Euro" Content=": قیمت آزاد یورو" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="Dolar_Price" Content="0" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Euro_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,200,50,0" VerticalAlignment="Top" Width="300">
+            <Grid>
+                <Label x:Name="label_Coin" Content=": قیمت سکه تمام" HorizontalAlignment="Right" Margin="0,20,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Gold" Content=": قیمت طلا 18 عیار" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="Coin_Price" Content="0" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Gold_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border CornerRadius="80" Margin="30,0,0,30" HorizontalAlignment="Left" Height="50"  VerticalAlignment="Bottom" Width="150">
+            <Button x:Name="btnRefresh" Content="تازه سازی" Cursor="Hand" Click="btnRefresh_Click"/>
+        </Border>
+        <Border HorizontalAlignment="Left" Height="150" Margin="30,50" VerticalAlignment="Top" Width="150">
+            <Image x:Name="image"  Source="/Resources/computer-programming-icon-11.jpg" Stretch="Fill"/>
+        </Border>
+    </Grid>
+</Window>
