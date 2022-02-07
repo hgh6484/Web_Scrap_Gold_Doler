@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="348" Width="571">
     <Grid Background="Azure">
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,50,50,0" VerticalAlignment="Top" Width="300">
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,10,50,0" VerticalAlignment="Top" Width="300">
             <Grid>
                 <Label x:Name="label_Dolar" Content=": قیمت آزاد دلار" HorizontalAlignment="Right" Margin="0,20,30,0" VerticalAlignment="Top"/>
                 <Label x:Name="label_Euro" Content=": قیمت آزاد یورو" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
@@ -15,12 +15,18 @@
                 <Label x:Name="Euro_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
-        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,200,50,0" VerticalAlignment="Top" Width="300">
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="175" Margin="0,125,50,0" VerticalAlignment="Top" Width="300">
             <Grid>
                 <Label x:Name="label_Coin" Content=": قیمت سکه تمام" HorizontalAlignment="Right" Margin="0,20,30,0" VerticalAlignment="Top"/>
                 <Label x:Name="label_Gold" Content=": قیمت طلا 18 عیار" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
                 <Label x:Name="Coin_Price" Content="0" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="Gold_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Gold_Copy" Content=": وزن طلا به گرم" HorizontalAlignment="Right" Margin="0,90,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Gold_Copy1" Content=": (اجرت(ریال" HorizontalAlignment="Right" Margin="0,112,30,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtGoldW" HorizontalAlignment="Left" Margin="50,94,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="txtMozd" HorizontalAlignment="Left" Margin="50,116,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                <Button x:Name="btnGoldCalc" Content="محاسبه" HorizontalAlignment="Left" Height="20" Margin="199,143,0,0" VerticalAlignment="Top" Width="69" Click="btnGoldCalc_Click"/>
+                <Label x:Name="Gold_Price_Calc" Content="0" HorizontalAlignment="Left" Margin="50,139,0,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
         <Border CornerRadius="80" Margin="30,0,0,30" HorizontalAlignment="Left" Height="50"  VerticalAlignment="Bottom" Width="150">
