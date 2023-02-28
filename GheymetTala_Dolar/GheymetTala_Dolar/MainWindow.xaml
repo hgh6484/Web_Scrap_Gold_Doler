@@ -9,10 +9,12 @@
     <Grid Background="Azure">
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="100" Margin="0,10,50,0" VerticalAlignment="Top" Width="300">
             <Grid>
-                <Label x:Name="label_Dolar" Content=": قیمت آزاد دلار" HorizontalAlignment="Right" Margin="0,20,30,0" VerticalAlignment="Top"/>
-                <Label x:Name="label_Euro" Content=": قیمت آزاد یورو" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
-                <Label x:Name="Dolar_Price" Content="0" HorizontalAlignment="Left" Margin="50,20,0,0" VerticalAlignment="Top"/>
-                <Label x:Name="Euro_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Dolar" Content=": قیمت آزاد دلار" HorizontalAlignment="Right" Margin="0,10,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Euro" Content=": قیمت آزاد یورو" HorizontalAlignment="Right" Margin="0,30,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Derham" Content=": قیمت آزاد درهم امارات" HorizontalAlignment="Right" Margin="0,50,30,0" VerticalAlignment="Top"/>
+                <Label x:Name="Dolar_Price" Content="0" HorizontalAlignment="Left" Margin="50,10,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Euro_Price" Content="0" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="AED_Price" Content="0" HorizontalAlignment="Left" Margin="50,50,0,0" VerticalAlignment="Top"/>
             </Grid>
         </Border>
         <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Right" Height="175" Margin="0,125,50,0" VerticalAlignment="Top" Width="300">

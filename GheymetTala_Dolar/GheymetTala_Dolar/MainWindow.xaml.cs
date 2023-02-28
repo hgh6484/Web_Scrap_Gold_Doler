@@ -23,7 +23,7 @@ namespace GheymetTala_Dolar
     /// </summary>
     public partial class MainWindow : Window
     {
-        HtmlDocument xhtml;
+        HtmlDocument xhtmlAED, xhtmlUSD, xhtmlUER, xhtmlCoin, xhtmlGold, xhtml;
 
         /// <summary>
         /// تابع سازنده
@@ -32,7 +32,11 @@ namespace GheymetTala_Dolar
         {
             InitializeComponent();
 
-            xhtml = GetXHtmlFromUri("https://www.tgju.org/");
+            xhtmlAED = GetXHtmlFromUri("https://www.eghtesadnews.com/markets/dirham");
+            xhtmlUSD = GetXHtmlFromUri("https://www.eghtesadnews.com/markets/dollar");
+            xhtmlUER = GetXHtmlFromUri("https://www.eghtesadnews.com/markets/euro");
+            xhtmlCoin = GetXHtmlFromUri("https://www.eghtesadnews.com/markets/coin");
+            xhtmlGold = GetXHtmlFromUri("https://www.eghtesadnews.com/markets/gold");
 
             GetPrices();
         }
@@ -42,10 +46,15 @@ namespace GheymetTala_Dolar
         /// </summary>
         private void GetPrices()
         {
-            Dolar_Price.Content = xhtml.GetElementbyId("l-bank_exchange_sell_usd").ChildNodes[3].InnerText;
-            Euro_Price.Content = xhtml.DocumentNode.SelectSingleNode("//*[@id=\"main\"]/div[6]/div/div[1]/div[2]/div/div[1]/table/tbody/tr[2]").ChildNodes[3].InnerText;
-            Coin_Price.Content = xhtml.GetElementbyId("l-sekee").ChildNodes[3].InnerText;
-            Gold_Price.Content = xhtml.GetElementbyId("l-geram18").ChildNodes[3].InnerText;
+            //Dolar_Price.Content = xhtml.GetElementbyId("l-bank_exchange_sell_usd").ChildNodes[3].InnerText;
+            //Euro_Price.Content = xhtml.DocumentNode.SelectSingleNode("//*[@id=\"main\"]/div[6]/div/div[1]/div[2]/div/div[1]/table/tbody/tr[2]").ChildNodes[3].InnerText;
+            //Coin_Price.Content = xhtml.GetElementbyId("l-sekee").ChildNodes[3].InnerText;
+            //Gold_Price.Content = xhtml.GetElementbyId("l-geram18").ChildNodes[3].InnerText;
+            Dolar_Price.Content = xhtmlUSD.DocumentNode.SelectSingleNode(@"/html/body/div[2]/div/div/div/div[3]/div[2]/div/div/table/tbody/tr[3]/td[2]").InnerText;
+            Euro_Price.Content = xhtmlUER.DocumentNode.SelectSingleNode(@"/html/body/div[2]/div/div/div/div[3]/div/div[1]/div/div/div/table/tbody/tr[3]/td[1]").InnerText;
+            AED_Price.Content = xhtmlAED.DocumentNode.SelectSingleNode(@"/html/body/div[2]/div/div/div/div[3]/div/div[1]/div/div/div/table/tbody/tr[3]/td[1]").InnerText;
+            Coin_Price.Content = xhtmlCoin.DocumentNode.SelectSingleNode(@"/html/body/div[2]/div/div/div/div[3]/div[1]/div[2]/div/div/table/tbody/tr[3]/td[2]").InnerText;
+            Gold_Price.Content = xhtmlGold.DocumentNode.SelectSingleNode(@"/html/body/div[2]/div/div/div/div[3]/div[2]/div/div/table/tbody/tr[3]/td[2]").InnerText;
         }
 
         /// <summary>
@@ -56,7 +65,7 @@ namespace GheymetTala_Dolar
             xhtml.GetElementbyId("gold-calculator-weight").SetAttributeValue("value", txtGoldW.Text);
             xhtml.GetElementbyId("gold-calculator-pay").SetAttributeValue("value", txtMozd.Text);
             //HtmlElement fbLink = xhtml.GetElementbyId("gold-calculator-pay"); //webBrowser.Document.GetElementByID("fbLink");
-           //.SetAttributeValue("onkeyup",)
+            //.SetAttributeValue("onkeyup",)
 
             Gold_Price_Calc.Content = xhtml.GetElementbyId("gold-calculator-result").ChildNodes[0].InnerText;
         }
